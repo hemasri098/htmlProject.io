@@ -1,5 +1,94 @@
+<!DOCTYPE html>
 <html>
-<head>
-<h1>HII</h1>
-</head>
+	<head>
+		<script>
+		function openTab(event, tabName) {
+
+		  // Declare all variables
+		  var i, tabcontent, tablinks;
+
+		  // Get all elements with class="tabcontent" and hide them
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";
+		  }
+
+		  // Get all elements with class="tablinks" and remove the class "active"
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+
+		  // Show the current tab, and add an "active" class to the button that opened the tab
+		  document.getElementById(tabName).style.display = "block";
+		  event.currentTarget.className += " active";
+		}
+		</script> 
+		<style>
+		.tab {
+		  overflow: hidden;
+		  border: 1px solid #ccc;
+		  background-color: #f1f1f1;
+		}
+
+		/* Style the buttons that are used to open the tab content */
+		.tab button {
+		  background-color: #17202A;
+		  font-size: 16px;
+		  color:white;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+		  padding: 50px 200px;
+		  transition: 0.3s;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+		  background-color: #566573;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+		  background-color: #566573;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		  font-size: 50px;
+		  display: none;
+		  padding: 12px 12px;
+		  border: 1px solid #ccc;
+		  border-top: none;
+		}
+		</style>
+		<div class="tab">
+		  <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+		  <button class="tablinks" onclick="openTab(event, 'Aboutme')">Aboutme</button>
+		  <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+		  <button class="tablinks" onclick="openTab(event, 'Gallery')">Gallery</button>
+			
+		</div>
+
+		<div id="Home" class="tabcontent">
+		  <h3>Home</h3>
+		  <p>Let us explore.</p>
+		</div>
+
+		<div id="Aboutme" class="tabcontent">
+		  <h3>Aboutme</h3>
+		  <p>I am Dangudubiyyam Hemasri. I am from Rajahmundry.</p>
+		</div>
+
+		<div id="Contact" class="tabcontent">
+		  <h3>Contact</h3>
+		  <p>Email: hemasri.dangudubiyyam@zemosolabs.com.</p>
+		</div>
+		<div id="Gallery" class="tabcontent">
+		  <h3>Gallery</h3>
+		  <img src = "/home/dhemasri/Desktop/sailu.jpeg" width = 250px height = 320px alt = "It's a baby's photo." />
+		  <img src = "/home/dhemasri/Desktop/raja.jpeg"width = 250px height = 320px alt = "It's a baby's photo." />
+		  <img src = "/home/dhemasri/Desktop/hemai.jpeg"width = 250px height = 320px alt = "It's a baby's photo." />
+		</div>
+	</head>
 </html>
